@@ -12,3 +12,28 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+
+
+require("dotenv").config()
+
+const express = require("express")
+const server = express()
+
+const actionsRouter = require("./routers/actionsRouter.js")
+const projectsRouter = require("./routers/projectsRouter.js")
+
+const port = process.env.PORT
+
+server.use(express.json())
+
+server.use("/api/actions", actionsRouter)
+server.use("/api/projects", projectsRouter)
+
+server.get("/", (req, res)=>{
+  res.status(200).json({
+    port: `API is Deployed on Port ${port}`,
+    greeting: process.env.GREET
+  })
+})
+
+server.listen(port, () => console.log(`\n === Server Running on Port ${port} ===\n`))
