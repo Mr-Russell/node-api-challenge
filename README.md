@@ -16,12 +16,12 @@ The Minimum Viable Product must be completed in three hours.
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Team Lead_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `firstName-lastName`.
+- [X] Create a forked copy of this project.
+- [X] Add your _Team Lead_ as collaborator on Github.
+- [X] Clone your forked version of the Repository.
+- [X] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
+- [X] Implement the project on this Branch, committing changes regularly.
+- [X] Push commits: git push origin `firstName-lastName`.
 
 Follow these steps for completing your project.
 
@@ -38,15 +38,32 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [X] Mention two parts of Express that you learned about this week.
 
-- [ ] Describe Middleware?
+  Express is an application framework that adds extra functionality to Node, such as routing and middleware. 
+  
+  Without Express, Node would require large chunks of code for common tasks such as sending an HTML page to a browser. With Express, sending an HTML file can be done with a single line of code.
 
-- [ ] Describe a Resource?
 
-- [ ] What can the API return to help clients know if a request was successful?
+- [X] Describe Middleware?
 
-- [ ] How can we partition our application into sub-applications?
+  Middleware is like an array of functions that get executed in the order they are introduced into the server code. These functions determine if they are required for the specific request, and if they are then they perform a specific task and either produce a response from the server or pass on the information to the next function in line until a response is produced.
+
+
+- [X] Describe a Resource?
+
+  A Resource is essentially the data stored in and supplied by an API. This data can be created with post requests, read with get requests, updated with put requests, or removed with delete requests. 
+
+
+- [X] What can the API return to help clients know if a request was successful?
+
+  When an API returns data to a client, it should always be accompanied by a status code. This code can tell the client if the request was successful (200), unsuccessful (400), or if an error occurred during the retrieval process (500).
+
+
+- [X] How can we partition our application into sub-applications?
+
+  The larger applications become, the more information those apps will have to store. To make the information easier to access, you can separate the different types of information into categories, and store them in different places. Instead of writing one file to store the many different locations where data can be accessed, you can break up the endpoints based on their category. One way to do this is with Routers. Each Router will have the same base URL, and it's own code base to manage all endpoints when can access more specific categories of data.
+
 
 ## Minimum Viable Product
 
